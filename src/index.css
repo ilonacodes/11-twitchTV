@@ -10,12 +10,15 @@ header {
 
 .title {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     margin: 0 auto;
-    width: 500px;
+    width: 550px;
     text-align: center;
     text-shadow: 0px 1px 1px #555;
-    margin-bottom: 10px;
+}
+
+.space {
+    margin-top: 25px;
 }
 
 .listbox {
@@ -23,7 +26,7 @@ header {
     border-radius: 0px;
     width: 500px;
     margin: 0 auto;
-    padding: 15px 10px 1px 10px;
+    padding: 25px 10px 1px 10px;
     box-shadow: 0px 7px 9px 5px rgba(0,0,0,0.4);
     text-align: center;
 }
@@ -33,6 +36,7 @@ header {
     padding-left: 50px;
     padding-right: 50px;
     text-decoration: none;
+    font-size: 38px;
 }
 
 .selected, .selected:focus {
@@ -42,15 +46,16 @@ header {
 
 .line {
     border-bottom: 2px solid #333;
-    width: 90%;
-    margin-left: 12px;
-    opacity: .8;
+    width: 80%;
+    margin-left: 38px;
+    opacity: .4;
     padding: 12px;
 }
 
 .users {
     margin: 20px;
     padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .user {
@@ -59,5 +64,20 @@ header {
 
 .hide-offline .offline {
     display: none;
+}
+
+.link {
+    text-decoration: none;
+    outline: none;
+    color: dodgerblue;
+}
+
+.link:visited {
+    color: dodgerblue;
+}
+
+.statusText {
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 

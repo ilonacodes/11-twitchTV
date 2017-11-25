@@ -21,21 +21,25 @@
         userElem.appendChild(statusElem);
         statusElem.classList.add('user');
 
-        nameElem.innerText = name;
+        var statusTextElem = document.createElement('div');
+        statusElem.appendChild(statusTextElem);
+        statusTextElem.classList.add('statusText');
 
         const script = document.createElement('script');
 
         window['streamCallback__' + name] = function (data) {
             if (!data.stream) {
-                statusElem.innerText = "No stream";
+                nameElem.innerText = name;
                 userElem.classList.add('offline');
             } else {
                 console.log(data.stream);
                 var linkElem = document.createElement('a');
                 linkElem.setAttribute('href', data.stream.channel.url);
-                linkElem.innerText = 'Watch Stream ' + data.stream.channel.status;
+                linkElem.innerText = data.stream.channel.display_name;
                 linkElem.classList.add('link');
-                statusElem.appendChild(linkElem);
+                nameElem.appendChild(linkElem);
+                statusTextElem.innerText = data.stream.channel.status;
+
             }
         };
 
